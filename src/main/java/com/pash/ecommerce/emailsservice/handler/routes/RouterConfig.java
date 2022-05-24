@@ -18,6 +18,6 @@ public class RouterConfig {
 
     @Bean
     public RouterFunction<ServerResponse> routes(EmailsHandler handler) {
-        return route(POST("/test").and(contentType(MULTIPART_FORM_DATA)), handler::sendCV);
+        return route(POST("/cv").and(contentType(MULTIPART_FORM_DATA)), handler::sendCV);
     }
 }
