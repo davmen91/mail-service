@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: mail-pash-service
+  profiles:
+    active: dev
+  config:
+    import: optional:configserver:http://127.0.0.1:8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8761/eureka
+  instance:
+    prefer-ip-address: true
+    instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
