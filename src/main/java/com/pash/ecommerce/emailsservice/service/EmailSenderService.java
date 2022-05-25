@@ -93,7 +93,7 @@ public class EmailSenderService {
         if (request == null) return new DataRequest(cvConstant.getTo(), cvConstant.getBody(), cvConstant.getSubject());
         return new DataRequest(
                 dataValidate("to", request.getTo()),
-                dataValidate("body", request.getSubject()),
+                dataValidate("body", request.getBody()),
                 dataValidate("subject", request.getSubject())
         );
     }
