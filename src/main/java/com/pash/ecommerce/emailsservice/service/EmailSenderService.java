@@ -37,7 +37,7 @@ public class EmailSenderService {
                 rq.getData() != null || rq.getFile() != null)
                 .flatMap(rq -> {
                     DataRequest data = requestValidate(rq.getData());
-                    return this.sendEmailWithAttachment(data.getTo(), data.getBody(), data.getSubject(), rq.getFile())
+                    return this.sendEmailWithAttachment(data.getTo(), data.getSubject(), data.getBody(), rq.getFile())
                             .flatMap(response -> ServerResponse.ok().bodyValue(response));
                 });
     }
