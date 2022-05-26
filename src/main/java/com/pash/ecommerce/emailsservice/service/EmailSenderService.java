@@ -49,7 +49,7 @@ public class EmailSenderService {
 
             messageHelper.setFrom(cvConstant.getFrom());
             messageHelper.setTo(toEmail);
-            messageHelper.setText(body);
+            messageHelper.setText(body, true);
             messageHelper.setSubject(subject);
 
             MailEntity entity = getMailEntity();
