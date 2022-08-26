@@ -3,12 +3,13 @@ package com.pash.ecommerce.emailsservice.domain.constants;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
-@Component //@RefreshScope
+@Component @RefreshScope
 @Getter @Setter
 @ConfigurationProperties(prefix = "cv")
 public class CVConstant {
